@@ -1,12 +1,19 @@
 import React from 'react'
 // import './App.css';
-
+import Lists from './Lists';
 import Welcome from './Welcome';
+import Greeting from './CondRen';
 
 const App =()=>{
+const isLoggedIn=false;
+
   return(
-    <div style={{textAlign:'center', color:'red'}}>
-     <Welcome greeting='welcome to' name='React'/>
+    // <div style={{textAlign:'center', color:'red'}}>
+    //  <Welcome greeting='welcome to' name='React'/>
+    // </div>
+    <div>
+      {/* <Greeting isLoggedIn={isLoggedIn}/> */}
+      <Lists/>
     </div>
   )
 }
