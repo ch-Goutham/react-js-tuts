@@ -1,5 +1,4 @@
 import React from 'react'
-import { memo } from 'react'
 
 const ChildB = ({count, increment}) => {
     console.log("Child B rendered")
@@ -12,5 +11,5 @@ const ChildB = ({count, increment}) => {
   )
 }
 
-export default memo(ChildB);
+export default ChildB;
 
