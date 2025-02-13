@@ -1,30 +1,19 @@
-import React from 'react'
-// import './App.css';
-import Lists from './Lists';
-import Welcome from './Welcome';
-import Greeting from './CondRen';
+// import Parent from "./Parent";
+import React,{createContext, } from 'react';
+import User1 from "./User1";
 
-const App =()=>{
-const isLoggedIn=false;
+// create the context to hold the data
+const DataContext = createContext()
+function App() {
+  // The data we want to share with user4
+ const data = "Hello Iam Recat Js"
+  return (
+    <DataContext.Provider value={data}> 
+    <User1/>
+    </DataContext.Provider> 
+  );
 
-  return(
-    // <div style={{textAlign:'center', color:'red'}}>
-    //  <Welcome greeting='welcome to' name='React'/>
-    // </div>
-    <div>
-      {/* <Greeting isLoggedIn={isLoggedIn}/> */}
-      <Lists/>
-    </div>
-  )
 }
-// const Welcome=()=><h1 className='message'>Hello World</h1>
-// function App(){
-//   return(
-//     <div>
-//       <Welcome/>
-//     </div>
-    
-//   )
-  
-// }
+
 export default App;
+export {DataContext};
